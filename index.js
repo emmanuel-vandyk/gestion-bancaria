@@ -11,25 +11,34 @@ class Cliente {
 }
 
 class cuentaCorriente {
+    numeroCuenta;
+    #saldoCuenta;
+    agencia;
+
     constructor() {
-        this.saldoCuenta = 0;
+        this.#saldoCuenta = 0;
         this.numeroCuenta = '';
         this.agencia = '';
     }
 
     depositoEnCuenta(valor) {
-        this.saldoCuenta += valor;
+        if (valor > 0)
+        this.#saldoCuenta += valor;
     }
 
     retirarDeCuenta(valor) {
-        this.saldoCuenta -= valor;
+        if (valor <= this.#saldoCuenta)
+        this.#saldoCuenta -= valor;
     }
 }
 
 cuentaDeLeonardo = new cuentaCorriente();
+// cuentaDeLeonardo.#saldoCuenta = 10;
 
 cuentaDeLeonardo.depositoEnCuenta(100);
 console.log(cuentaDeLeonardo);
-cuentaDeLeonardo.retirarDeCuenta(50)
+cuentaDeLeonardo.retirarDeCuenta(100)
+console.log(cuentaDeLeonardo);
+cuentaDeLeonardo.depositoEnCuenta(-10);
 console.log(cuentaDeLeonardo);
 
