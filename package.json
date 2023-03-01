@@ -1,11 +1,12 @@
 {
-  "name": "gestion-bancaria",
+  "name": "gestion-cuentas-banco-popular",
   "version": "1.0.0",
-  "description": "",
+  "description": "Gestión de Cuentas Corrientes del Banco Popular",
   "main": "index.js",
   "scripts": {
     "start": "index.js"
   },
   "author": "Emmanuel van Dyk",
-  "license": "ISC"
+  "license": "ISC",
+  "type": "module"
 }
