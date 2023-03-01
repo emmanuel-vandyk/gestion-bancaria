@@ -1,18 +1,15 @@
 // Importación de clases
+import { Cliente } from './modules/cliente.js';
 import { cuentaCorriente } from './modules/cuentaCorriente.js';
 
-const cuentaDeLeonardo = new cuentaCorriente();
+const cliente1 = new Cliente('Leonardo', '13804050', '123224');
+const cliente2 = new Cliente('María', '234674975', '8989');
+
+const cuentaDeMaria = new cuentaCorriente(cliente2, '2', '002');
+const cuentaDeLeonardo = new cuentaCorriente(cliente1, '1', '001');
 
 let saldo = cuentaDeLeonardo.verSaldo();
-console.log(`El saldo actual es: ${saldo}`);
 
 saldo = cuentaDeLeonardo.depositoEnCuenta(150);
-console.log(`El saldo actual es: ${saldo}`);
 
-saldo = cuentaDeLeonardo.retirarDeCuenta(100)
-console.log(`El saldo actual es: ${saldo}`);
-
-saldo = cuentaDeLeonardo.depositoEnCuenta(10);
-console.log(`El saldo actual es: ${saldo}`);
-
-
+console.log(cuentaCorriente.cantidadCuentas);
